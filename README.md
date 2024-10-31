@@ -12,13 +12,13 @@ The primary goal of this project was to observe the percentage of my media diet 
 5. Conclusions
 
 
-# Data Exploration 
+# Data Exploration # 
 
 
-# Cleaning the Data (Stopwords, Lemmatization, Tokenization)
+# Cleaning the Data (Stopwords, Lemmatization, Tokenization) # 
 
-# Applied Machine Learning Algorithms
+# Applied Machine Learning Algorithms # 
 
-# Results
+# Results # 
 
-# Conclusions and Future Work 
+# Conclusions and Future Work # 
