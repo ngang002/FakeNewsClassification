@@ -24,8 +24,7 @@ In this section I will talk about the process by which I cleaned the data.  As I
 I then implemented a cleaning method that removed 
 
 ## Applied Machine Learning Algorithms ##
-I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  This takes a text and vectorized the words by using 
-$${\displaystyle \mathrm {tf} (t,d)={\frac {f_{t,d}}{\sum _{t'\in d}{f_{t',d}}}}}$$
+I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  The term frequency (number of times a word appears in the document) is given by: $${\mathrm{tf}(t,d) = {\frac {f_{t,d}}{\sum _{t'\in d}{f_{t',d}}}}}$$
 
 ## Results ## 
 
