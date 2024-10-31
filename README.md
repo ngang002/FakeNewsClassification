@@ -25,7 +25,7 @@ I then implemented a cleaning method that removed
 
 ## Applied Machine Learning Algorithms ##
 I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  This takes a text and vectorized the words by using 
-{\displaystyle \mathrm {tf} (t,d)=0.5+0.5\cdot {\frac {f_{t,d}}{\max\{f_{t',d}:t'\in d\}}}}
+$${\displaystyle \mathrm {tf} (t,d)=0.5+0.5\cdot {\frac {f_{t,d}}{\max\{f_{t',d}:t'\in d\}}}}$$
 
 ## Results ## 
 
