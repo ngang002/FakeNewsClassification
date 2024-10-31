@@ -17,7 +17,15 @@ The primary goal of this project was to observe the percentage of my media diet 
 
 ## Cleaning the Data (Stopwords, Lemmatization, Tokenization) ##
 
+In this section I will talk about the process by which I cleaned the data.  As I mentioned previously I compiled the data into a format which included: 
+  1. Title
+  2. Text
+  3. Classification
+I then implemented a cleaning method that removed 
+
 ## Applied Machine Learning Algorithms ##
+I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  This takes a text and vectorized the words by using 
+{\displaystyle \mathrm {tf} (t,d)=0.5+0.5\cdot {\frac {f_{t,d}}{\max\{f_{t',d}:t'\in d\}}}}
 
 ## Results ## 
 
