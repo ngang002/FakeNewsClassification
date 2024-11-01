@@ -43,4 +43,16 @@ I then implemented a cleaning method that involved 3 major steps (all of these p
 I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  In this methodology the 
 ## Results ## 
 
+### Naive Bayes Classifier ### 
+![In this figure](ConfusionMatrices/multiNB_confusion.png)
+
+### Decision Tree Classifier ### 
+![In this figure](ConfusionMatrices/dct_confusion.png)
+
+### Random Forest Classifier ###
+![In this figure](ConfusionMatrices/rfc_confusion.png)
+
+### XGBoost Classifier ###
+![In this figure](ConfusionMatrices/rfc_confusion.png)
+
 ## Conclusions and Future Work ##
