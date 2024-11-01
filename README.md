@@ -28,7 +28,7 @@ In this section I will talk about the process by which I cleaned the data.  As I
   2. Text
   3. Classification
 I then implemented a cleaning method that involved 3 major steps:
-  1. Removing stopwords (like "a", "the", "in", for more information see ![this link](https://pythonspot.com/nltk-stop-words/)
+  1. Removing stopwords (like "a", "the", "in", for more information see ![this link](https://pythonspot.com/nltk-stop-words)
 
 ## Applied Machine Learning Algorithms ##
 I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  In this methodology the 
