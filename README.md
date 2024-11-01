@@ -44,6 +44,10 @@ I first tested an term frequency–inverse document frequency (TF-IDF) vectoriza
 ## Results ## 
 
 ### Naive Bayes Classifier ### 
+
+Naive Bayes are a family of models which attempt to connect the label to the properties given in a features/variables set.  It utilizes the Naive Bayes assumption 
+
+$$ P(B|A) \propto P(A|B) \times P(A) $$
 ![In this figure](ConfusionMatrices/multiNB_confusion.png)
 
 ### Decision Tree Classifier ### 
