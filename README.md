@@ -41,7 +41,6 @@ I then implemented a cleaning method that involved 3 major steps (all of these p
   3. Vectorization: we then convert the words into numbers, since computers cannot "read" in the same ways humans do.  The vectorization process allows the ML/AI models that we will use below to read in the vectors, which represent the text they were derived from.  However, we also must ensure that these vectors are of standard length, so as to simplify the reading process.  To implement this I limit the number of elements in each given vector (in essence selecting the number of words after removing the stopwords and lemmatizing to be sent into our training models).  
 ## Applied Machine Learning Algorithms ##
 I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  In this methodology the 
-## Results ## 
 
 ### Naive Bayes Classifier ### 
 
@@ -51,10 +50,21 @@ $$ \mathrm{Posterior} \propto \mathrm{Likelihood} \times \mathrm{prior} $$
 
 The primary driver to use a Naive Bayes (NB) Classifier is because of it's ease of simplicity and relatively interperability.  The Naive Bayes classifier attempts to calculate the probability of observing a set of features given a label (likelihood), and the probability of observing that label (prior).  However, the term Naive comes from the assumption that each feature is independent of all the other features, which may not be an accrute describer for the problem that we are using (however this is for illustrative purposes), since this is an NLP problem, and this includes grammar.  In this Repo I have used a multinomial NB classifier, however, in the future I will intend to use a Bernoulli NB since this is a binary classification problem.  
 
+### Decision Tree Classifier ### 
+A decision tree classifier, most simply creates a tree which splits the data based on some characteristic that maximizes a given score, and ends when it reaches some stopping criteria, which could be all the elements in a branch have the same label (i.e. all the labels in a leaf node will be the same), or we have reached the limit in the number of branches we are allowed.  
+
+### Random Forest Classifier ###
+
+### XGBoost Classifier ###
+
+## Results ## 
+
+### Naive Bayes Classifier ### 
+
 ![In this figure](ConfusionMatrices/multiNB_confusion.png)
 
 ### Decision Tree Classifier ### 
-A decision tree classifier, most simply creates a tree which splits the data based on some characteristic that maximizes a given score, and ends when it reaches some stopping criteria, which could be all the elements in a branch have the same label (i.e. all the labels in a leaf node will be the same), or we have reached the limit in the number of branches we are allowed.  
+
 
 ![In this figure](ConfusionMatrices/dct_confusion.png)
 
