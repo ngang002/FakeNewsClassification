@@ -13,7 +13,11 @@ The primary goal of this project was to observe the percentage of my media diet 
 
 
 ## Data Exploration ##
-![Alt text](DataExploration_Plots/real_vs_fake.png)
+![In this figure ](DataExploration_Plots/real_vs_fake.png)
+
+
+![In this figure](DataExploration_Plots/length_Of_articles.png)
+
 
 
 ## Cleaning the Data (Stopwords, Lemmatization, Tokenization) ##
