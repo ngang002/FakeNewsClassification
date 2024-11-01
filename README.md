@@ -22,10 +22,9 @@ These data are structured as:
   3. Label (0 for fake, 1 for real) 
 
 
-
+In this figure I show the percentage of real news (blue) versus fake news (red) in a pie chart.  There are slightly more 
 ![In this figure ](DataExploration_Plots/real_vs_fake.png)
 
-In this figure I show the number of real news vs fake news
 
 ![In this figure](DataExploration_Plots/length_Of_articles.png)
 
