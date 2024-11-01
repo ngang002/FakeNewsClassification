@@ -14,7 +14,7 @@ The primary goal of this project was to observe the percentage of my media diet 
 
 ## Data Exploration ##
 ![In this figure ](DataExploration_Plots/real_vs_fake.png)
-
+In this figure I show the number of real news vs fake news
 
 ![In this figure](DataExploration_Plots/length_Of_articles.png)
 
@@ -26,7 +26,8 @@ In this section I will talk about the process by which I cleaned the data.  As I
   1. Title
   2. Text
   3. Classification
-I then implemented a cleaning method that removed 
+I then implemented a cleaning method that involved 3 major steps:
+  1. Removing stopwords (like "a", "the", "in", for more information see ![](https://pythonspot.com/nltk-stop-words/)
 
 ## Applied Machine Learning Algorithms ##
 I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  In this methodology the 
