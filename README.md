@@ -38,7 +38,7 @@ In this next figure, I go into a deeper dive into the actual data that I will be
 I then implemented a cleaning method that involved 3 major steps (all of these processes make use of the [NLTK Library](https://pythonspot.com/nltk-stop-words) ):
   1. Removing stopwords: Stop words like "a", "the", "in", etc.  These words generally are very high frequency words, and this frequency leads to very little meaning when this word is coupled with their "environments".  For example in this sentence, the words "for" and "the" hold very little meaning, and should we get rid of them, this sentence should largely be understood by the machine
   2. Lemmatization: Lemmatization is the process by which an NLP algorithm converts adverbs, adjectives, and other grammatical categories into "their" base worlds.  For example in the world "lovely" the base word is "love", indicative of a positive sentiment.  However, the suffix "-ly" simply denotes a different grammatical use of the word "love".  In short lemmatizing sorts words by grouping inflected or variant forms of the same word.  For the purposes of this work, I used the WordNetLemmatizer
-  3. 
+  3. Vectorization: we then convert the words into numbers, since computers cannot "read" in the same ways humans do.  The vectorization process allows the ML/AI models that we will use below to read in the vectors, which represent the text they were derived from.  However, we also must ensure that these vectors are of standard length, so as to simplify the reading process.  To implement this I limit the number of elements in each given vector (in essence selecting the number of words after removing the stopwords and lemmatizing to be sent into our training models).  
 ## Applied Machine Learning Algorithms ##
 I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  In this methodology the 
 ## Results ## 
@@ -49,9 +49,13 @@ Naive Bayes are a family of models which attempt to connect the label to the pro
 
 $$ \mathrm{Posterior} \propto \mathrm{Likelihood} \times \mathrm{prior} $$
 
+The primary driver to use a Naive Bayes (NB) Classifier is because of it's ease of simplicity and relatively interperability.  The Naive Bayes classifier attempts to calculate the probability of observing a set of features given a label (likelihood), and the probability of observing that label (prior).  However, the term Naive comes from the assumption that each feature is independent of all the other features, which may not be an accrute describer for the problem that we are using (however this is for illustrative purposes), since this is an NLP problem, and this includes grammar.  In this Repo I have used a multinomial NB classifier, however, in the future I will intend to use a Bernoulli NB since this is a binary classification problem.  
+
 ![In this figure](ConfusionMatrices/multiNB_confusion.png)
 
 ### Decision Tree Classifier ### 
+A decision tree classifier, most simply creates a tree which splits the data based on some characteristic that maximizes a given score, and ends when it reaches some stopping criteria, which could be all the elements in a branch have the same label (i.e. all the labels in a leaf node will be the same), or we have reached the limit in the number of branches we are allowed.  
+
 ![In this figure](ConfusionMatrices/dct_confusion.png)
 
 ### Random Forest Classifier ###
