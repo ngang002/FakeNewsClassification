@@ -13,7 +13,7 @@ The primary goal of this project was to observe the percentage of my media diet 
 
 
 ## Data Exploration ##
-![alt text](https://github.com/ngang002/FakeNewsClassification/origin/main/real_vs_fake.png?raw=true)
+(main/DataExplorationPlots/real_vs_fake.png)
 
 
 ## Cleaning the Data (Stopwords, Lemmatization, Tokenization) ##
