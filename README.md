@@ -48,7 +48,7 @@ I first tested an term frequency–inverse document frequency (TF-IDF) vectoriza
 Naive Bayes are a family of models which attempt to connect the label to the properties given in a features/variables set.  It utilizes the Naive Bayes assumption: 
 
 $$ \mathrm{Posterior} \propto \mathrm{Likelihood} \times \mathrm{prior} 
-$$ P(C|**x**) \propto P(**x**|C) \times P(C) $$
+$$P(C|**x**) \propto P(**x**|C) \times P(C)$$
 
 ![In this figure](ConfusionMatrices/multiNB_confusion.png)
 
