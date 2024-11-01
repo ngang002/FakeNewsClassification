@@ -24,8 +24,7 @@ In this section I will talk about the process by which I cleaned the data.  As I
 I then implemented a cleaning method that removed 
 
 ## Applied Machine Learning Algorithms ##
-I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  The term frequency (number of times a word appears in the document) is given by: $$ \mathrm{tf}_{t,d}  = \frac{\mathrm{word count}}{\Sum \mathrm{word count}}$$
-
+I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  In this methodology the 
 ## Results ## 
 
 ## Conclusions and Future Work ##
