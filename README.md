@@ -22,9 +22,12 @@ These data are structured as:
   3. Label (0 for fake, 1 for real) 
 
 
-In this figure I show the percentage of real news (blue) versus fake news (red) in a pie chart.  There are slightly more 
+In this figure I show the percentage of real news (blue) versus fake news (red) in a pie chart.  There are slightly more fake news articles than there are real news articles, however there is not an imbalance which require a package like SMOTE.  Often times when dealing with such datasets I found that the data would be imbalanced with either more fake news or more real news.  During my collection, since a large portion of my scraping was done on accreddited news organizations, I found substantially more real news articles than fake news articles.  Other datasets had the opposite issues.
+
 ![In this figure ](DataExploration_Plots/real_vs_fake.png)
 
+
+In this next figure, I go into a deeper dive into the actual data that I will be training on: the text.  The main goal of this project is to create classifiers which can distinguish between real and fake news, and potentially on the easiest ways to possible discrinimate them is to find the number of words in each article.  In the figures below I show the distribution of the number of words in the text and in the title.  
 
 ![In this figure](DataExploration_Plots/length_Of_articles.png)
 
