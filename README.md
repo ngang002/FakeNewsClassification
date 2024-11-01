@@ -13,6 +13,16 @@ The primary goal of this project was to implement NLP processes and ML/AI algori
 
 
 ## Data Exploration ##
+
+As mentioned previously there are 70,000 articles in the set I was able to accumulate.  However, the data that I am using for this work is unfortunately too large to store on Github, so I will explain the structure here.  
+
+These data are structured as: 
+  1. Title
+  2. Text
+  3. Label (0 for fake, 1 for real) 
+
+
+
 ![In this figure ](DataExploration_Plots/real_vs_fake.png)
 
 In this figure I show the number of real news vs fake news
@@ -22,11 +32,6 @@ In this figure I show the number of real news vs fake news
 
 
 ## Cleaning the Data (Stopwords, Lemmatization, Tokenization) ##
-
-In this section I will talk about the process by which I cleaned the data.  As I mentioned previously I compiled the data into a format which included: 
-  1. Title
-  2. Text
-  3. Classification
 
 I then implemented a cleaning method that involved 3 major steps (all of these processes make use of the [NLTK Library](https://pythonspot.com/nltk-stop-words) ):
   1. Removing stopwords: Stop words like "a", "the", "in", etc.  These words generally are very high frequency words, and this frequency leads to very little meaning when this word is coupled with their "environments".  For example in this sentence, the words "for" and "the" hold very little meaning, and should we get rid of them, this sentence should largely be understood by the machine
