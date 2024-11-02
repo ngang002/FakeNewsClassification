@@ -80,7 +80,7 @@ XGBoost stands for "Extreme Gradient Boosting”, and the method by which this w
 
 ### Naive Bayes Classifier ### 
 
-In this section, I show the confusion matrices of the ML/AI methods that I talked about above.  In all of these plots I plot the "True Positive" rates in the upper left, "False Negatives" in the upper right, "True negatives" in the lower right, and "False Positives" in the lower left.  Positive (0) represents the case in which an article is considered fake news, while Negative (1) are articles considered real news.  
+In this section, I show the confusion matrices of the ML/AI methods that I talked about above.  The x-axis represents .  In all of these plots I plot the "True Positive" rates in the upper left, "False Negatives" in the upper right (Type II), "True negatives" in the lower right, and "False Positives" (Type I) in the lower left.  Positive (0) represents the case in which an article is fake news, while Negative (1) is an article that is real news.  
 
 I foud that NB yielded the least accurate results, however this intuitively tracks, as the NB classifier attempts to correlate each label to each individual document, and tries to create a predictve pattern based on Bayes's rule (see above).  
 
@@ -94,7 +94,7 @@ The decision tree classifier is the second least accurate, however again this is
 
 ### Random Forest Classifier ###
 
-The random forest and XGBoost classifiers do even better than the decision because they inherintly address the underlying weaknesses of the decision tree model (although these results are much more difficult to intuit).  In essence these results perform more adequately than the Decision Tree Classifier alone, likely because they overcome the issues of overfitting (Random Forest), as well as making sequential corrections to the training process.  
+The random forest and XGBoost classifiers do even better than the decision because they inherently address the underlying weaknesses of the decision tree model (although these results are much more difficult to intuit).  In essence these results perform more adequately than the Decision Tree Classifier alone, likely because they overcome the issues of overfitting (Random Forest), as well as making sequential corrections to the training process.  These classifications achieved 92% and 95% accuracy. One thing of particular note however is that the random forest classifier is has a larger "False Negative" rate than "False Positive" rate, while XGBoost has roughly equal Type I and Type II errors.  The random forest preferentially seems to miscategorize fake news articles as as real articles 
 
 ![In this figure](ConfusionMatrices/rfc_confusion.png)
 
