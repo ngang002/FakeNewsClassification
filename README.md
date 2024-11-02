@@ -67,13 +67,14 @@ A decision tree classifier, most simply creates a tree which splits the data bas
 
 The decision tree is useful for classifying Fake News as grammar is a non-linear system.  In addition, due to the relatively simple nature of this problem, decision trees are adept at handling .
 
-However, some weaknesses of decision trees include the instability (small changes in the data can change how a node makes decision) and relatively inaccurate since there is only a single decision tree being constructed
+However, some weaknesses of decision trees include the instability (small changes in the data can change how a node makes decision) and relatively inaccurate since there is only a single decision tree being constructed.  Another issue is overfitting the data, especially if hte depth of the trees becomes too large, where it can train well, but on test data perform poorly.  
 
 ### Random Forest Classifier ###
 
-Random forests are an example of ensemble models, in which there is an ensemble of decision trees being constructed to classify our news articles.  The nature of averaging over multiple trees eliminates
+Random forests are an example of ensemble models, in which there is an ensemble of decision trees being constructed to classify our news articles.  The nature of averaging over multiple trees reduces the impacts of overfitting, as averaging over the ensemble of different reduces the variance in classifications in a single tree.  This is done through a process called "bagging" where multiple subsamples are drawn and trained over. Ultimately, the prediction that is ultimately made is one that is "democratically" chosen after aggregating all the trees together.   
 
 ### XGBoost Classifier ###
+XGBoost stands for "Extreme Gradient Boosting”, and the method by which this works is it takes previous classifiers and implemented corrections to more accurately create predictions/classifications.  Gradient boosting is accomplished by combining multiple trees sequentially (rather than serially as in the random forest).  Corrections are then made to opimtimize the training weights until the maximum number of steps have been achieved, or the results have converged such that the changes in the gradient are very small.  These are all tunable hyperparameter (for which I have tested for).  For a more in depth analysis of XGBoost see [!link](https://xgboost.readthedocs.io/en/stable/tutorials/model.html).
 
 ## Results ## 
 
@@ -93,7 +94,7 @@ The decision tree classifier is the second least accurate, however again this is
 
 ### Random Forest Classifier ###
 
-The random forest and XGBoost classifiers do even better than the decision because they inherintly address the underlying weaknesses of the decision tree model (although these results are much more difficult to intuit).  
+The random forest and XGBoost classifiers do even better than the decision because they inherintly address the underlying weaknesses of the decision tree model (although these results are much more difficult to intuit).  In essence
 
 ![In this figure](ConfusionMatrices/rfc_confusion.png)
 
