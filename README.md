@@ -35,12 +35,20 @@ In this next figure, I go into a deeper dive into the actual data that I will be
 
 ## Cleaning the Data (Stopwords, Lemmatization, Tokenization) ##
 
-I then implemented a cleaning method that involved 3 major steps (all of these processes make use of the [NLTK Library](https://pythonspot.com/nltk-stop-words) ):
+The first step of the cleaning process is to remove punctuation, emojis, and symbollic lettering, as these elements in English grammar do no yield much significance to the meaning of a sentence.  While they can give context, the computer will not understand how to deal with these situations for this particular class of problem (all though in other cases, like search engines, this is  may not be the case). I replaced all the punctuation oriented strings into spaces (using regular expressions).  I then converted all the alphabetical characters into lower-case as well, so as to not have the same word appear multiple times with different weights due to upper/lower case differences.   
+
+
+I then implemented a standard NLP procedure that includes 3 major steps (all of these processes make use of the [NLTK Library](https://pythonspot.com/nltk-stop-words) ):
   1. Removing stopwords: Stop words like "a", "the", "in", etc.  These words generally are very high frequency words, and this frequency leads to very little meaning when this word is coupled with their "environments".  For example in this sentence, the words "for" and "the" hold very little meaning, and should we get rid of them, this sentence should largely be understood by the machine
   2. Lemmatization: Lemmatization is the process by which an NLP algorithm converts adverbs, adjectives, and other grammatical categories into "their" base worlds.  For example in the world "lovely" the base word is "love", indicative of a positive sentiment.  However, the suffix "-ly" simply denotes a different grammatical use of the word "love".  In short lemmatizing sorts words by grouping inflected or variant forms of the same word.  For the purposes of this work, I used the WordNetLemmatizer
   3. Vectorization: we then convert the words into numbers, since computers cannot "read" in the same ways humans do.  The vectorization process allows the ML/AI models that we will use below to read in the vectors, which represent the text they were derived from.  However, we also must ensure that these vectors are of standard length, so as to simplify the reading process.  To implement this I limit the number of elements in each given vector (in essence selecting the number of words after removing the stopwords and lemmatizing to be sent into our training models).  
+
 ## Applied Machine Learning Algorithms ##
-I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  In this methodology the 
+
+## TF-IDF ##
+I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  In this methodology we vectorize the text by taking the inverse frequency of a word in a document (or in our case a sub-sample of our documents).  In essence, the more rare a word is in the document(s) the more weight it is given when it is being applied to NLP and LLM.  Hence, words that are more common in a vernacular (like in this repo the word "words" appears many times) will have lower weights when compared to words that used less commonly ("like galaxies" or "bombastic").  
+
+
 
 ### Naive Bayes Classifier ### 
 
