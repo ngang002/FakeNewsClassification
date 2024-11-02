@@ -65,7 +65,7 @@ The primary driver to use a Naive Bayes (NB) Classifier is because of it's ease 
 ### Decision Tree Classifier ### 
 A decision tree classifier, most simply creates a tree which splits the data based on some characteristic that maximizes a given score (like Gini or entropy), and ends when it reaches some stopping criteria, which could be all the elements in a branch have the same label (i.e. all the labels in a leaf node will be the same), or we have reached the limit in the number of branches we are allowed.  
 
-The decision tree is useful for classifying Fake News as grammar is a non-linear system.  In addition, due to the relatively simple nature of this problem, decision trees are adept at handling .
+The decision tree is useful for classifying Fake News as grammar is a non-linear system.  In addition, due to the relatively simple nature of this problem, decision trees are adept at handling [EDIT]. 
 
 However, some weaknesses of decision trees include the instability (small changes in the data can change how a node makes decision) and relatively inaccurate since there is only a single decision tree being constructed.  Another issue is overfitting the data, especially if hte depth of the trees becomes too large, where it can train well, but on test data perform poorly.  
 
@@ -80,7 +80,7 @@ XGBoost stands for "Extreme Gradient Boosting”, and the method by which this w
 
 ### Naive Bayes Classifier ### 
 
-In this section, I show the confusion matrices of the ML/AI methods that I talked about above.  The x-axis represents .  In all of these plots I plot the "True Positive" rates in the upper left, "False Negatives" in the upper right (Type II), "True negatives" in the lower right, and "False Positives" (Type I) in the lower left.  Positive (0) represents the case in which an article is fake news, while Negative (1) is an article that is real news.  
+In this section, I show the confusion matrices of the ML/AI methods that I talked about above.  The x-axis represents .  In all of these plots I plot the "True Positive" rates in the upper left, "False Positive" in the upper right (Type I), "True negatives" in the lower right, and "False Negative" (Type II) in the lower left.  Positive (0) represents the case in which an article is fake news, while Negative (1) is an article that is real news.  
 
 I foud that NB yielded the least accurate results, however this intuitively tracks, as the NB classifier attempts to correlate each label to each individual document, and tries to create a predictve pattern based on Bayes's rule (see above).  
 
@@ -94,7 +94,7 @@ The decision tree classifier is the second least accurate, however again this is
 
 ### Random Forest Classifier ###
 
-The random forest and XGBoost classifiers do even better than the decision because they inherently address the underlying weaknesses of the decision tree model (although these results are much more difficult to intuit).  In essence these results perform more adequately than the Decision Tree Classifier alone, likely because they overcome the issues of overfitting (Random Forest), as well as making sequential corrections to the training process.  These classifications achieved 92% and 95% accuracy. One thing of particular note however is that the random forest classifier is has a larger "False Negative" rate than "False Positive" rate, while XGBoost has roughly equal Type I and Type II errors.  The random forest preferentially seems to miscategorize fake news articles as as real articles 
+The random forest and XGBoost classifiers do even better than the decision because they inherently address the underlying weaknesses of the decision tree model (although these results are much more difficult to intuit).  In essence these results perform more adequately than the Decision Tree Classifier alone, likely because they overcome the issues of overfitting (Random Forest), as well as making sequential corrections to the training process.  These classifications achieved 92% and 95% accuracy. One thing of particular note however is that the random forest classifier is has a larger "False Positive" rate than "False Negative" rate, while XGBoost has roughly equal Type I and Type II errors.  The random forest preferentially seems to miscategorize real news articles as fake articles, however a scenario such as classifying fake news articles, more skepticism of fake news is likely to be more beneficial than mischaracterizing fake news as real news.  This could prevent the propagation of fake news and misinformation throughout the internet.  
 
 ![In this figure](ConfusionMatrices/rfc_confusion.png)
 
