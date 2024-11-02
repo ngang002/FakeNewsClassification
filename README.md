@@ -51,9 +51,15 @@ $$ \mathrm{Posterior} \propto \mathrm{Likelihood} \times \mathrm{prior} $$
 The primary driver to use a Naive Bayes (NB) Classifier is because of it's ease of simplicity and relatively interperability.  The Naive Bayes classifier attempts to calculate the probability of observing a set of features given a label (likelihood), and the probability of observing that label (prior).  However, the term Naive comes from the assumption that each feature is independent of all the other features, which may not be an accrute describer for the problem that we are using (however this is for illustrative purposes), since this is an NLP problem, and this includes grammar.  In this Repo I have used a multinomial NB classifier, however, in the future I will intend to use a Bernoulli NB since this is a binary classification problem.  
 
 ### Decision Tree Classifier ### 
-A decision tree classifier, most simply creates a tree which splits the data based on some characteristic that maximizes a given score, and ends when it reaches some stopping criteria, which could be all the elements in a branch have the same label (i.e. all the labels in a leaf node will be the same), or we have reached the limit in the number of branches we are allowed.  
+A decision tree classifier, most simply creates a tree which splits the data based on some characteristic that maximizes a given score (like Gini or entropy), and ends when it reaches some stopping criteria, which could be all the elements in a branch have the same label (i.e. all the labels in a leaf node will be the same), or we have reached the limit in the number of branches we are allowed.  
+
+The decision tree is useful for classifying Fake News as grammar is a non-linear system.  In addition, due to the relatively simple nature of this problem, decision trees are adept at handling .
+
+However, some weaknesses of decision trees include the instability (small changes in the data can change how a node makes decision) and relatively inaccurate since there is only a single decision tree being constructed
 
 ### Random Forest Classifier ###
+
+Random forests are an example of ensemble models, in which there is an ensemble of decision trees being constructed to classify our news articles.  The nature of averaging over multiple trees eliminates
 
 ### XGBoost Classifier ###
 
