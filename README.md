@@ -46,9 +46,13 @@ I then implemented a standard NLP procedure that includes 3 major steps (all of 
 ## Applied Machine Learning Algorithms ##
 
 ## TF-IDF ##
-I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  In this methodology we vectorize the text by taking the inverse frequency of a word in a document (or in our case a sub-sample of our documents).  In essence, the more rare a word is in the document(s) the more weight it is given when it is being applied to NLP and LLM.  Hence, words that are more common in a vernacular (like in this repo the word "words" appears many times) will have lower weights when compared to words that used less commonly ("like galaxies" or "bombastic").  
+I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  In this methodology we vectorize the text by taking the inverse frequency of a word in a document (or in our case a sub-sample of our documents).  
 
+![In this figure](ConfusionMatrices/tf_eq.png)
 
+In essence, the more rare a word is in the document(s) the more weight it is given when it is being applied to NLP and LLM.  Hence, words that are more common in a vernacular (like in this repo the word "words" appears many times) will have lower weights when compared to words that used less commonly ("like galaxies" or "bombastic").  
+
+![In this figure](ConfusionMatrices/tf_idf.png)
 
 ### Naive Bayes Classifier ### 
 
