@@ -62,6 +62,7 @@ def TFIDF_preprocess(text):
 	# Ensures that whatever I put into the text is a string 
 	if type(text) != type(str): text = str(text)
 
+	tf.strings.regex_replace(text, '[%s]' % re.escape(string.punctuation), '')
 
 	main_words = re.sub('[^a-zA-Z]', ' ', text) # This only keeps the alphabet in a sequence of texts 
 	main_words = (main_words.lower()).split()   # converts all the letters to lowercase letters  
@@ -73,7 +74,7 @@ def TFIDF_preprocess(text):
 	main_words = ' '.join(main_words)
 	text = main_words
 
-	return tf.strings.regex_replace(text, '[%s]' % re.escape(string.punctuation), '')
+	return text
 
 
 def vectorize_text(text, vecLayer):

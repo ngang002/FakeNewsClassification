@@ -60,7 +60,7 @@ if __name__ == "__main__":
 		classifier = MultinomialNB()
 		confMatrix_File = 'multiNB_confusion.png'
 	if FLAG == 2: 
-		classifier = DecisionTreeClassifier()
+		classifier = DecisionTreeClassifier(max_levels=5)
 		confMatrix_File = 'dct_confusion.png'
 	if FLAG == 3: 
 		classifier = RandomForestClassifier(n_estimators=400)

@@ -51,7 +51,7 @@ print(len(X_len), len(X_len_title))
 
 fig, ax = plt.subplots(figsize=(6,6))
 ax.pie(counts, labels=['True News', 'Fake News'], autopct='%1.1f%%', colors=['lightskyblue', 'salmon'])
-fig.savefig("./DataExploration_Plots/real_vs_fake.pdf")
+fig.savefig("./DataExploration_Plots/real_vs_fake.png")
 
 X_occurrences = np.array([getOccurrences(text) for text in X])
 # print(X_occurrences)
@@ -88,4 +88,4 @@ ax[0].set_ylabel('P(# of words)')
 ax[1].set_xlabel('Number of Words in Title')
 ax[1].set_ylabel('P(# of words)')
 
-fig.savefig('./DataExploration_Plots/length_Of_articles.pdf')
+fig.savefig('./DataExploration_Plots/length_Of_articles.png')
