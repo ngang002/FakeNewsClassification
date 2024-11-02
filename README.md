@@ -46,9 +46,13 @@ I then implemented a standard NLP procedure that includes 3 major steps (all of 
 ## Applied Machine Learning Algorithms ##
 
 ## TF-IDF ##
-I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  In this methodology we vectorize the text by taking the inverse frequency of a word in a document (or in our case a sub-sample of our documents).  In essence, the more rare a word is in the document(s) the more weight it is given when it is being applied to NLP and LLM.  Hence, words that are more common in a vernacular (like in this repo the word "words" appears many times) will have lower weights when compared to words that used less commonly ("like galaxies" or "bombastic").  
+I first tested an term frequency–inverse document frequency (TF-IDF) vectorization methodology.  In this methodology we vectorize the text by taking the inverse frequency of a word in a document (or in our case a sub-sample of our documents).  
 
+![In this figure](ConfusionMatrices/tf_eq.png)
 
+In essence, the more rare a word is in the document(s) the more weight it is given when it is being applied to NLP and LLM.  Hence, words that are more common in a vernacular (like in this repo the word "words" appears many times) will have lower weights when compared to words that used less commonly ("like galaxies" or "bombastic").  
+
+![In this figure](ConfusionMatrices/tf_idf.png)
 
 ### Naive Bayes Classifier ### 
 
@@ -75,14 +79,22 @@ Random forests are an example of ensemble models, in which there is an ensemble 
 
 ### Naive Bayes Classifier ### 
 
+In this section, I show the confusion matrices of the ML/AI methods that I talked about above.  In all of these plots I plot the "True Positive" rates in the upper left, "False Negatives" in the upper right, "True negatives" in the lower right, and "False Positives" in the lower left.  Positive (0) represents the case in which an article is considered fake news, while Negative (1) are articles considered real news.  
+
+I foud that NB yielded the least accurate results, however this intuitively tracks, as the NB classifier attempts to correlate each label to each individual document, and tries to create a predictve pattern based on Bayes's rule (see above).  
+
 ![In this figure](ConfusionMatrices/multiNB_confusion.png)
 
 ### Decision Tree Classifier ### 
 
+The decision tree classifier is the second least accurate, however again this is largely intuitive as we are dealing with a single decision tree.  I attempted to optimize the hyperparameters of the tree (like the number of levels the tree could have), and this was the best that I could achieve with this method.  The underlying issue, is the single decision tree, and likely minor differences in documents can incorrectly classify.  However, this method does substantially better than the NB classifier. Addtiionally, the nature of this specific problem is well suited to decision trees and will like be even more accurate in cases where we use an ensemble trees or allow the tree to evolve based off incorrect classification.  
 
 ![In this figure](ConfusionMatrices/dct_confusion.png)
 
 ### Random Forest Classifier ###
+
+The random forest and XGBoost classifiers do even better than the decision because they inherintly address the underlying weaknesses of the decision tree model (although these results are much more difficult to intuit).  
+
 ![In this figure](ConfusionMatrices/rfc_confusion.png)
 
 ### XGBoost Classifier ###
