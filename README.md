@@ -103,4 +103,4 @@ The random forest and XGBoost classifiers do even better than the decision becau
 
 ## Conclusions and Future Work ##
 
-In the future I aim to implememnt neural network and comparing my models to those made by BERT.  This is currently in process as you can see from [this file](multInOuput_ClassifyDataset.py) and [this file](BERT_ClassifyDataset.py) scripts.  
+In the future I aim to implememnt neural network and comparing my models to those made by BERT.  This is currently in process as you can see from [this file](./multInOuput_ClassifyDataset.py) and [this file](./BERT_ClassifyDataset.py) scripts.  
